@@ -1,0 +1,225 @@
+.cabecalho__menu-hamburguer {
+    width: 12px;
+    height: 12px;
+    background-image: url("../assets/menu-hamburguer.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-flex;
+    margin-right: 1.2em;}
+
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburguer {
+    background-image: url("../assets/Menu\ Aberto.png");
+}
+
+.container__botao:checked ~ .container__rotulo {
+    background: var(--azul-degrade);
+}
+
+.cabecalho { 
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0.5em 1.5em;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem__menu {
+    padding: 0.8em;
+}
+
+.container__imagem {
+    padding: 0.2em;
+    width: 40px;
+    height: 40px;
+}
+
+.container__imagem__logo {
+    width: 32px;
+    height: 32px;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+    background-color: var(--branco);
+}
+
+.container__botao:checked~.lista-menu {
+   display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__item {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__titulo {
+    display: none;
+}
+
+.opcoes,
+.opcoes__item,
+.opcoes__link,
+.container__texto {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container {
+        margin: 0 1.6em;
+    }
+
+    .container__imagem__logo {
+        margin-right: 1em;
+    }
+
+    .container__imagem {
+        padding: 0 1.8em;
+    }
+
+     .container__titulo,
+     .container__titulo__negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+        margin-top: 0.4em;
+     }
+
+     .container__titulo {
+        font-weight: 400;
+        display: block;
+     }
+
+     .container__titulo__negrito {
+        font-weight: 700;
+     }
+
+     .opcoes {
+        display: flex;
+        flex-direction: row;
+     }
+
+     .opcoes__item {
+        display: flex;
+        padding: 0 1.6em;
+        text-transform: uppercase;
+    }
+
+     .opcoes__link {
+        display: flex;
+        text-decoration: none;
+        color: var(--preto);
+     }
+
+     .container__imagem__transparente {
+        display: none;
+     }
+
+     .cabecalho__menu-hamburguer {
+        display: none;
+     }
+
+     .opcoes__botao:checked~.lista-menu {
+        display: block;
+        width: auto;
+     }
+
+     .opcoes__botao {
+        display: none;
+     }
+
+     .container__icone {
+        gap: 10em
+     }
+
+    .opcoes__item:checked~.lista-menu {
+
+        background-color: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .opcoes__botao:checked ~ .opcoes__rotulo > .opcoes__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+    
+    .opcoes__item {
+        padding: 1.5em 1em;
+    }
+
+    .lista-menu__titulo:hover {
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu__item:hover > .lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu__link {
+        padding: 1em
+    }
+
+    .lista-menu__item {
+        padding: 1em 0;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+
+    .cabecalho {
+        padding:0 4em 0 1em;
+    }
+
+    .container__imagem {
+        margin-left: 2em;
+    }
+
+    .container__titulo {
+        padding-right: 2em;
+    }
+
+    .menu-principal {
+        margin-right: auto;
+    }
+
+    .container__link {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .container__texto {
+        display: block;
+    }
+}
